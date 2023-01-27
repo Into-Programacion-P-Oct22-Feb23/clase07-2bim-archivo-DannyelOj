@@ -7,6 +7,7 @@ package manejoarray;
 
 // import java.util.ArrayList;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -29,9 +30,9 @@ public class ArrayList01 {
         arreglo.add(2000);
         arreglo.add(3000);
 
-        for (int i = 0; i < arreglo.size(); i++) {
+        /*for (int i = 0; i < arreglo.size(); i++) {
             System.out.println(arreglo.get(i));
-        }
+        }*/
 
         System.out.println("----------------------------------");
 
@@ -42,13 +43,34 @@ public class ArrayList01 {
         arreglo3.add(12.2);
         arreglo3.add(13.2);
 
-        for (int i = 0; i < arreglo3.size(); i++) {
+       /*for (int i = 0; i < arreglo3.size(); i++) {
             System.out.println(arreglo3.get(i));
-        }
+        }*/
 
         System.out.println("----------------------------------");
-        ArrayList<String> arreglo2 = new ArrayList<>();
-
+        
+        ArrayList <String> arreglo2 = new ArrayList<>();
+        boolean bandera = true;
+        String pais;
+        Scanner entrada = new Scanner(System.in);
+        String letra; 
+        
+        while(bandera){
+            System.out.println("Ingrese un nobre de un pais");
+            pais = entrada.nextLine();
+            arreglo2.add(pais);
+            
+            System.out.println("Si desea terminar el proceso presione S");
+            letra = entrada.nextLine();
+            if("s".equals(letra)){
+                bandera=false;
+            }
+        }
+        System.out.println("Presentar los valores en pantalla");
+        
+        for (int i = 0; i < arreglo2.size(); i++) {
+            System.out.printf("&s\n",arreglo2.get(i));
+        
         
         
         /*
@@ -56,5 +78,6 @@ public class ArrayList01 {
         
         ArrayList <Boolean> arreglo4 = new ArrayList<>();
          */
+    }
     }
 }
